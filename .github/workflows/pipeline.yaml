@@ -2,11 +2,11 @@ name: CI Pipeline
 on:
   push:
     branches:
-    -main
+      -main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Chekcout
-       uses: actions/checkout@v2
-       run: python test.py
+      -name: Checkout
+      uses: actions/checkout@v2
+          run: python test.py
