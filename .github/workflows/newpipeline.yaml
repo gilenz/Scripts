@@ -17,10 +17,12 @@ jobs:
         runs-on: ubuntu-latest
         needs: build
         steps:
-          - name: check if code is ok
+          - name: check if black working on code
+            run: black blackfile.py 2> /dev/null
+          - name: check if code i written without errors
             run: |
-                if [$? != 0]; then
-                 echo "there is a problem in the code"
+                if[$? != 0]; then
+                echo "there is aproblem with the code"
     
     
     
