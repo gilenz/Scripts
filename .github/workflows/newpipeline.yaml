@@ -18,6 +18,7 @@ jobs:
         needs: build
         steps:
           - name: check if black working on code
+            run: black --version
           - name: check if code i written without errors
             run: |
                 if black blackfile.py; then
