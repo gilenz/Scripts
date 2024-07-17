@@ -44,7 +44,7 @@ jobs:
                     subject: 'Your CI Pipeline'
                     body: |
                         your ci pipeline is acomplished.
-                    to: gilgil956111@gmail.com
+                    to: ${{ env.GOOGLE_RESP }}
                     
                     
 
