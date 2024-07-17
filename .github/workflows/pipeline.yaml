@@ -7,10 +7,12 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-          - name: test for echo
-            run: echo hello
+          - name: clone the repo
           - uses: actions/checkout@v4
           - name: ls test
-            run: ls
-          - name: run the test
-            run: python test.py
+    
+    test:
+     runs-on: ubuntu-latest
+     steps:
+        - name: run the test
+          run: python test.py
