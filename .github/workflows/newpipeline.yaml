@@ -32,7 +32,7 @@ jobs:
             runs-on: ubuntu-latest
             steps:
               - name: echo google user
-                run: echo $ {{ env.GOOGLE_USER }}
+                run: echo ${{ env.GOOGLE_USER }}
               - name: echo google pass
                 run: echo ${{ env.GOOGLE_PASS }}
               - name: Send email notification
@@ -41,7 +41,7 @@ jobs:
                     from: GITHUB
                     server_address: smtp.gmail.com
                     server_port: 587
-                    username: $ {{ env.GOOGLE_USER }}
+                    username: ${{ env.GOOGLE_USER }}
                     password: ${{ env.GOOGLE_PASS }}
                     subject: 'Your CI Pipeline'
                     body: |
