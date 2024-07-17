@@ -4,8 +4,8 @@ on:
         branches:
             - main
 env:
-    GOOGLE_USER: ${{ var.USER_NAME }}
-    GOOGLE_PASS: ${{ var.USER_PASS }}
+    GOOGLE_USER: ${{ vars.USER_NAME }}
+    GOOGLE_PASS: ${{ vars.USER_PASS }}
     
 
 
