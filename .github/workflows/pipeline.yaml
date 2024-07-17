@@ -9,4 +9,7 @@ jobs:
         steps:
           - name: test for echo
             run: echo hello
+          - uses: actions/checkout@v4
+          - name: ls test
+            run: ls
 
