@@ -1,12 +1,12 @@
-name: CI Pipeline
+name: CI Pipline
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-    - uses: actions/checkout@v2
-      run: echo hello
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: test for echo
+            run: echo hello
+
