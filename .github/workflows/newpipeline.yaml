@@ -1,0 +1,32 @@
+name: Pipeline
+on:
+    pull_request:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - name: install black
+            run: pip install black
+
+
+    
+    test:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+          - name: check if black working on code
+          - name: check if code i written without errors
+            run: |
+                if black blackfile.py; then
+                echo "code is good"
+                else
+                    echo "code is not good"
+                fi
+
+                #e
+    
+    
+    
