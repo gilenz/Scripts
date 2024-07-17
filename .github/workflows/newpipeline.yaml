@@ -31,6 +31,10 @@ jobs:
     send_email:
             runs-on: ubuntu-latest
             steps:
+              - name: echo google user
+                run: echo $GOOGLE_USER
+              - name: echo google pass
+                run: echo $GOOGLE_PASS
               - name: Send email notification
                 uses: dawidd6/action-send-mail@v3
                 with:
