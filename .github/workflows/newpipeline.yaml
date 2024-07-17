@@ -30,6 +30,7 @@ jobs:
 
     send_email:
             runs-on: ubuntu-latest
+            needs: build
             steps:
               - name: echo google user
                 run: echo ${{ env.GOOGLE_USER }}
