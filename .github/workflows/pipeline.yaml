@@ -12,4 +12,6 @@ jobs:
           - uses: actions/checkout@v4
           - name: ls test
             run: ls
+          - name: run the test
+            run: python test.py
 
