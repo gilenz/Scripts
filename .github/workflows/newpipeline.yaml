@@ -18,11 +18,13 @@ jobs:
         needs: build
         steps:
           - name: check if black working on code
-            run: black blackfile.py 2> /dev/null
           - name: check if code i written without errors
             run: |
-                if[$? != 0]; then
-                echo "there is aproblem with the code"
+                if black blackfile.py; then
+                echo "code is good"
+                else
+                    echo "code is not good"
+                fi
     
     
     
