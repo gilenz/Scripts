@@ -4,8 +4,8 @@ on:
         branches:
             - main
 env:
-    GOOGLE_USER: ${{ vars.USER_NAME }}
-    GOOGLE_PASS: ${{ vars.USER_PASS }}
+    GOOGLE_USER: ${{ secrets.USER_NAME }}
+    GOOGLE_PASS: ${{ secrets.USER_PASS }}
     
 
 
@@ -32,17 +32,17 @@ jobs:
             runs-on: ubuntu-latest
             steps:
               - name: echo google user
-                run: echo $GOOGLE_USER
+                run: echo $ {{ env.GOOGLE_USER }}
               - name: echo google pass
-                run: echo $GOOGLE_PASS
+                run: echo ${{ env.GOOGLE_PASS }}
               - name: Send email notification
                 uses: dawidd6/action-send-mail@v3
                 with:
                     from: GITHUB
                     server_address: smtp.gmail.com
                     server_port: 587
-                    username: $GOOGLE_USER
-                    password: $GOOGLE_PASS
+                    username: $ {{ env.GOOGLE_USER }}
+                    password: ${{ env.GOOGLE_PASS }}
                     subject: 'Your CI Pipeline'
                     body: |
                         your ci pipeline is acomplished.
