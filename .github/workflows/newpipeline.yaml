@@ -38,7 +38,7 @@ jobs:
                     server_address: smtp.gmail.com
                     server_port: 587
                     username: gil.niyazov@agmatix.com
-                    password: Gilenz56194012!@
+                    password: atcy vuel mpqj pvvy
                     subject: 'Your CI Pipeline'
                     body: |
                         your ci pipeline is acomplished.
