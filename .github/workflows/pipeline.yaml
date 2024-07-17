@@ -10,7 +10,5 @@ jobs:
           - name: test for echo
             run: echo hello
           - uses: actions/checkout@v4
-          - name: ls test
-            run: ls
           - name: run the test
             run: python test.py
