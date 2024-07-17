@@ -4,8 +4,8 @@ on:
         branches:
             - main
 env:
-    GOOGLE_USER: ${{ secrets.USER_NAME }}
-    GOOGLE_PASS: ${{ secrets.USER_PASS }}
+    GOOGLE_USER: ${{ var.USER_NAME }}
+    GOOGLE_PASS: ${{ var.USER_PASS }}
     
 
 
@@ -37,8 +37,8 @@ jobs:
                     from: GITHUB
                     server_address: smtp.gmail.com
                     server_port: 587
-                    username: ${{ env.GOOGLE_USER }}
-                    password: ${{ env.GOOGLE_PASS }}
+                    username: $GOOGLE_USER
+                    password: $GOOGLE_PASS
                     subject: 'Your CI Pipeline'
                     body: |
                         your ci pipeline is acomplished.
