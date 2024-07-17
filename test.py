@@ -1,9 +1,8 @@
-def print_hello():
-    return "hello"
+from file import hello_func
 
 
 def test_hello():
-    assert print_hello() == "hello"
+    assert hello_func() == "hello"
     print("test passed")
     
     
