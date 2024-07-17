@@ -34,6 +34,7 @@ jobs:
               - name: Send email notification
                 uses: dawidd6/action-send-mail@v3
                 with:
+                    from: GITHUB
                     server_address: smtp.gmail.com
                     server_port: 587
                     username: GOOGLE_USER
