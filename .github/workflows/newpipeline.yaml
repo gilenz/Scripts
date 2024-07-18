@@ -39,8 +39,8 @@ jobs:
                     from: GITHUB
                     server_address: smtp.gmail.com
                     server_port: 587
-                    username: $GOOGLE_USER
-                    password: $GOOGLE_PASS
+                    username: ${{ env.GOOGLE_USER }}
+                    password: ${{ env.GOOGLE_PASS }}
                     subject: 'Your CI Pipeline'
                     body: |
                         your ci pipeline is acomplished.
